@@ -146,10 +146,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bookstore.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Book.h" />
+    <ClInclude Include="Bookstore.h" />
     <ClInclude Include="Customer.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Rating.h" />

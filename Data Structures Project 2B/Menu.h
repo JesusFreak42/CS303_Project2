@@ -47,7 +47,7 @@ public:
 		return choice;
 	};
 
-	bool Check_Book(book output)  //checks if right book
+	bool Check_Book(Book output)  //checks if right book
 	{
 		cout << " You have selected " << output.getTitle() << "." << endl;
 		cout << " This book has an ISBN number of " << output.getISBN() << "." << endl;
@@ -68,7 +68,7 @@ public:
 			return false;
 	};
 
-	void Display_Book_Rating(book output)
+	void Display_Book_Rating(Book output)
 	{
 		cout << "The Average Rating Of " << output.getTitle << " Is " << output.getAverageRating() << "." << endl;
 	};

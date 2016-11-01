@@ -10,9 +10,19 @@ public:
 	string getName() const { return name; };
 	Rating getRating(Rating r) {
 		for (int i = 0; i < ratings.size(); i++) {
-			if (ratings.at(i).getBookID == r.getBookID) return ratings.at(i);
+			if (ratings.at(i).getBookID() == r.getBookID()) return ratings.at(i);
 		}
+		Rating x;
+		return x;
 	};
+	Rating getRating(int ISBN) {
+		for (int i = 0; i < ratings.size(); i++) {
+			if (ratings.at(i).getBookID() == ISBN) return ratings.at(i);
+		}
+		Rating x;
+		return x;
+	};
+	int getNumRatings() { return ratings.size(); };
 
 	void setID(int x) { ID = x; };
 	void setName(string n) { name = n; };
