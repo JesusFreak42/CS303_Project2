@@ -23,6 +23,7 @@ public:
 		return x;
 	};
 	int getNumRatings() { return ratings.size(); };
+	vector<Rating> getAllRatings() { return ratings; };
 
 	void setID(int x) { ID = x; };
 	void setName(string n) { name = n; };
