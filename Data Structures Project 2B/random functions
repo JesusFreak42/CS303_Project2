@@ -1,0 +1,77 @@
+//these are just some experimental functions.  More ideas than anything.  Likely incomplete and probably need tweeking
+
+int weight(customer cus1, customer cus2)
+{
+int weight=0;
+#pragma omp parellel_for
+for (int i=0; i<cus1.getRating().size();i++)
+{
+for (intj=0;j<cus2.getRatings().size();j++)
+{
+if (cus1.getbook[i]==cus2.getbook[j])
+weight+=compare.(cus1.getbook()[i].getrating(),cus2[j].getbook()[j].getrating());
+}
+}
+return weight;
+}
+
+int compare (num1,num2)
+{
+int temp=0;
+temp=num1-num2
+if (temp>0)
+temp=5-temp;
+else
+temp=5+temp;
+return temp;
+}
+
+void find_uncommon(customer cus1, customer cus2, vector& uncommon)
+{
+bool common=false;
+#pragma omp parallel for
+for (int i=0; i<cus2.size();i++)
+{
+for (int j=0; j<cus1.size();j++)
+{
+if cus1.book[j].title()==cus2.book[i].title()
+common=true;
+}
+if (common==false)
+uncommon.pushback(cus2.book[j];
+}
+
+
+void check_three_customers(original,cus1,cus2,cus3)
+{
+vector uncommon;
+find_uncommon(original,cus1,uncommon)
+if (uncommon.size()>=3)
+{
+Display_uncommon(uncommon,highestRated)
+return
+}
+find_uncommon(original,cus2,uncommon)
+if (uncommon.size()>=3)
+{
+Display_uncommon(uncommon,highestRated)
+return
+}
+find_uncommon(original,cus3,uncommon)
+Display_uncommon(uncommon,highestRated
+}
+
+
+
+//Menu Function
+
+Display_uncommon(vector uncommon, array highestRated)
+{
+if (uncommon.size()>=3)
+cou<<uncommon[0]<<uncommon[1]<<uncommon[2]<<endl;
+else if (uncommon.size()==2)
+cou<<uncommon[0]<<uncommon[1]<<highestRated[0]<<endl;
+else if (uncommon.size()==1)
+cou<<uncommon[0]<<highestRated[0]<<highestRated[1]<<endl;
+else
+cou<<highestRated[0]<<highestRated[1]<<highestRated[2]<<endl;
