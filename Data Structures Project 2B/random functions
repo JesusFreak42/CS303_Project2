@@ -15,8 +15,6 @@ Display_Recommended(uncommon,highest_rated);
 }
 
 
-
-
 Customer array[3] find_Highest_Weight(Customer current_customer, vector customers(all the other customers))
 {
   Customer array[3] Weight_List;
