@@ -6,8 +6,11 @@
 
 Book vector get_Recommended()
 {
+Books vector uncommon; 
+Customer array[3] best_Customers=find_Highest_Weight( current_customer, all customers);
+uncommon=check_three_customers(current_customer,best_Customers[0],best_Customers[1],best_Customers[2]);
 
-
+Display_Recommended(uncommon,highest_rated);
 
 }
 
@@ -102,23 +105,21 @@ uncommon.pushback(cus2.book[j]);
 }
 
 
-void check_three_customers(original,cus1,cus2,cus3)
+Book vector check_three_customers(original,cus1,cus2,cus3)
 {
 vector uncommon;
 find_uncommon(original,cus1,uncommon)
 if (uncommon.size()>=3)
 {
-Display_uncommon(uncommon,highestRated)
-return
+return uncommon;
 }
 find_uncommon(original,cus2,uncommon)
 if (uncommon.size()>=3)
 {
-Display_uncommon(uncommon,highestRated)
-return
+return uncommon;
 }
 find_uncommon(original,cus3,uncommon)
-Display_uncommon(uncommon,highestRated)
+return uncommon;
 }
 
 
