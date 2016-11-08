@@ -86,17 +86,17 @@ public:
 		}
 	};
 
-	void Display_Recommendations(/*array or list or whatever*/) 
-	{
-		cout << "Your Recommended Books are:" << endl << endl;
-
-	/* for (int i=0; i<array.size();i++;
-		{
-		cout<< i+1 <<<<") " array[i]<<endl;
-		}
-	*/
-
-	};
+	void Display_Recommended(vector uncommon, array highestRated)
+{
+	if (uncommon.size()>=3)
+		cout<<uncommon[0]<<uncommon[1]<<uncommon[2]<<endl;
+	else if (uncommon.size()==2)
+		cout<<uncommon[0]<<uncommon[1]<<highestRated[0]<<endl;
+	else if (uncommon.size()==1)
+		cout<<uncommon[0]<<highestRated[0]<<highestRated[1]<<endl;
+	else
+		cout<<highestRated[0]<<highestRated[1]<<highestRated[2]<<endl;
+	}
 
 	string Get_Book_Input()
 	{
