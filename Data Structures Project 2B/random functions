@@ -17,10 +17,14 @@ Book vector get_Recommended()
 Customer array[3] find_Highest_Weight(Customer current_customer, vector customers(all the other customers))
 {
   Customer array[3] Weight_List;
-  
+  int weight_One=customers;
+  int weight_Two;
   Weight_List[0]=customers[0];
   Weight_List[1]=customers[1];
   Weight_List[2]=customers[2];
+  int weight_One=weight(current_customer,customers[0]);
+  int weight_Two=weight(current_customer,customers[1]);
+  int weight_Three=weight(current_customer,customers[2]);
   
   for( int i=0; i<customers.size()
   {
@@ -29,12 +33,30 @@ Customer array[3] find_Highest_Weight(Customer current_customer, vector customer
   
   else
   {
+  int compare_Weight=weight(current_customer,customer[i]);
+  if (compare_Weight>weight_Three)
+  {
+    if (compare_Weight>weight_Two)
+    { //replace three with two, and two with new
+      if(compare_Weight>weight_Three)
+      { // push it all back and replace one with new
+      else
+      {
+      }
+    else
+    {
+    }
+    }
   
+  }
+  else{
+    Weight_List[2]=customer[i];
+    weight_Three=compare_Weight
+    }
+  }
   }
   }
 }
-
-
 
 int weight(customer cus1, customer cus2)
 {
