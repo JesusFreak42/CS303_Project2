@@ -98,7 +98,7 @@ for (int j=0; j<cus1.size();j++)
 if cus1.book[j].title()==cus2.book[i].title()
 common=true;
 }
-if (common==false)
+if (common==false&&cus2.book[j].getRating()>3)
 uncommon.pushback(cus2.book[j]);
 }
 
