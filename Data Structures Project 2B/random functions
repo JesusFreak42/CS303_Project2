@@ -7,7 +7,7 @@
 Book vector get_Recommended()
 {
 Books vector uncommon; 
-Customer array[3] best_Customers=find_Highest_Weight( current_customer, all customers);
+Customer array[3] best_Customers=find_Highest_Weight( current_customer, vector customers //all the other customers);
 uncommon=check_three_customers(current_customer,best_Customers[0],best_Customers[1],best_Customers[2]);
 
 Display_Recommended(uncommon,highest_rated);
@@ -15,11 +15,10 @@ Display_Recommended(uncommon,highest_rated);
 }
 
 
-Customer array[3] find_Highest_Weight(Customer current_customer, vector customers(all the other customers))
+Customer array[3] find_Highest_Weight(Customer current_customer, vector customers //all the other customers)
 {
   Customer array[3] Weight_List;
-  int weight_One=customers;
-  int weight_Two;
+  
   Weight_List[0]=customers[0];
   Weight_List[1]=customers[1];
   Weight_List[2]=customers[2];
@@ -27,7 +26,7 @@ Customer array[3] find_Highest_Weight(Customer current_customer, vector customer
   int weight_Two=weight(current_customer,customers[1]);
   int weight_Three=weight(current_customer,customers[2]);
   
-  for( int i=0; i<customers.size()
+  for( int i=0; i<customers.size())
   {
   if (current_customer& == customers[i]&)
   continue;
@@ -37,25 +36,24 @@ Customer array[3] find_Highest_Weight(Customer current_customer, vector customer
   int compare_Weight=weight(current_customer,customer[i]);
   if (compare_Weight>weight_Three)
   {
-    if (compare_Weight>weight_Two)
-    { //replace three with two, and two with new
-      if(compare_Weight>weight_Three)
-      { // push it all back and replace one with new
-      else
-      {
-      }
-    else
-    {
-    }
-    }
-  
-  }
-  else{
     Weight_List[2]=customer[i];
-    weight_Three=compare_Weight
+    weight_Three=compare_Weight;
+    
+    if (compare_Weight>weight_Two)
+    {
+    weight_Three=weight_Two;
+    Weight_List[2]=Weight_List[1];
+    weight_Two=compare_Weight;
+    Weight_List[1]=customer[i]
+
+      if(compare_Weight>weight_Three)
+      {
+      weight_Two=weight_One;
+      Weight_List[1]=Weight_List[0];
+      weight_One=compare_Weight;
+      Weight_List[0]=customer[i]
+      }
     }
-  }
-  }
   }
 }
 
