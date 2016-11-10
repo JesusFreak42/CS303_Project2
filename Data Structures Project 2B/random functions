@@ -90,16 +90,22 @@ return temp;
 void find_uncommon(customer cus1, customer cus2, vector& uncommon)
 {
 bool common=false;
+
 #pragma omp parallel for
-for (int i=0; i<cus2.size();i++)
+for (int i=0; i<cus1.size();i++)
 {
-for (int j=0; j<cus1.size();j++)
+for (int j=0; j<cus2.size();j++)
 {
-if cus1.book[j].title()==cus2.book[i].title()
-common=true;
+  if (cus2.book[j].title()==cus1.book[i].title())
+  {
+    if (cus2.book[j].rating()>3)
+    {
+      common=true;
+    }
+  }
 }
-if (common==false&&cus2.book[j].getRating()>3)
-uncommon.pushback(cus2.book[j]);
+if (common==false)
+uncommon.pushback(cus2.book[i]);
 }
 
 
