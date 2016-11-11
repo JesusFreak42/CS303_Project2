@@ -14,6 +14,8 @@ public:
 	void getRecommendations(Customer user); //Will return book
 	int getAverageRating(int bookID); //returns the book's average rating or, if no ratings, -1
 	void updatePopular(Rating newRating);
+	
+	vector<Customer> getCustomers(){return customers;}
 
 	Book findBook(int ID) {
 		for (int i = 0; i < books.size(); i++) {
