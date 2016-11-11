@@ -4,7 +4,7 @@
 
 
 
-vector<Book> get_Recommended(Customer current_customer, vector customers) //requires knowledge of customers
+void get_Recommended(Customer current_customer, vector customers) //requires knowledge of customers
   //contains all the elements and calls the functions
 {
 vector <Books> uncommon; 
