@@ -35,3 +35,13 @@ private:
 	vector<Rating> ratings;
 };
 
+Customer Customer::operator=(const Customer & rhs)
+{
+	if(this == &rhs)
+		return *this;
+	ID=rhs.getID();
+	name=rhs.getName();
+	ratings=rhs.getAllRatings();
+	return *this;
+}
+
