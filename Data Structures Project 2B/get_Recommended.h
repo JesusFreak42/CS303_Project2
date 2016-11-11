@@ -56,6 +56,7 @@ vector<Customer> find_Highest_Weight(Customer current_customer, vector customers
       }
     }
   }
+    return Weight_List;
 }
 
 int weight(customer cus1, customer cus2)  //compares all the books in common(using parallel programming) and gives weights
