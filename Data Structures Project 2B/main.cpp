@@ -76,7 +76,8 @@ int main() {
 	cout << "Welcome to the Bookstore" << endl;
 	user_ID = cin >> "Please enter your user ID: ";
 	User=Store.Customer_Search(user_ID);
-
+	
+	bool Correct_Book=false;
 	bool done=false;
 	while (!done)
 	{
@@ -88,11 +89,24 @@ int main() {
 	}
 	else if (choice=="1")
 	{
-		
+		while(!Correct_Book)
+		{
+		string Book_title=Get_Book_Input()
+		Book Selected_Book= 			//search for book function
+		Correct_Book=Check_Book(Selected_Book)
+		Display_Book_Rating(Selected_Book)
+							//rate book function
+		}
 	}
 	else if (choice=="2")
 	{
-		
+		while(!Correct_Book)
+		{	
+		string Book_title=Get_Book_Input()
+		Book Selected_Book= 					//search for book function
+		bool Check_Book(Selected_Book)
+							//rate book function
+		}
 	}
 	else if (chioce=="3")
 	{
