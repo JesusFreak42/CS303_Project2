@@ -17,3 +17,11 @@ private:
 	int rating; //between 0 and 5
 };
 
+Rating Rating::operator=(const Rating & rhs)
+{
+	if(this == &rhs)
+		return *this;
+    	bookID=rhs.getBookID();
+	rating=rhs.getRating();
+	return *this;
+}
