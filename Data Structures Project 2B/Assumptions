@@ -1,0 +1,9 @@
+1) The format of the input file would be consistent with the example given on BlackBoard.
+
+2) Providing the top three recommendations is enough.
+
+3) Searching through the 3 highest rated customers for uncommon books is enough.
+
+4) Only books rated above three by the highest weighted customers should be added to recommendations list.
+
+5)
