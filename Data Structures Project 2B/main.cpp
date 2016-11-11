@@ -108,9 +108,9 @@ int main() {
 							//rate book function
 		}
 	}
-	else if (chioce=="3")
+	else if (choice=="3")
 	{
-	get_Recommended(Customer current_customer, vector customers);
+	get_Recommended(User, Store.getCustomers());
 	}
 
 	}
