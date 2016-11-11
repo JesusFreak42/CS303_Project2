@@ -77,9 +77,30 @@ int main() {
 	user_ID = cin >> "Please enter your user ID: ";
 	User=Store.Customer_Search(user_ID);
 
+	bool done=false;
+	
+	while (!done)
+	{
+	string choice=GetChoice();
+	if (choice=="0")
+	{
+		done=true;
+		break;
+	}
+	else if (choice=="1")
+	{
+		
+	}
+	else if (choice=="2")
+	{
+		
+	}
+	else if (chioce=="3")
+	{
+		
+	}
 
-
-
+	}
 	finBooks.close();
 	finCustomers.close();
 	finRatings.close();
