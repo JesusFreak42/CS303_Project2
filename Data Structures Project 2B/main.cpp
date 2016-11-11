@@ -78,7 +78,6 @@ int main() {
 	User=Store.Customer_Search(user_ID);
 
 	bool done=false;
-	
 	while (!done)
 	{
 	string choice=GetChoice();
@@ -97,7 +96,7 @@ int main() {
 	}
 	else if (chioce=="3")
 	{
-		
+	get_Recommended(Customer current_customer, vector customers);
 	}
 
 	}
